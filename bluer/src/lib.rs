@@ -591,6 +591,8 @@ pub enum ErrorKind {
     AuthenticationRejected,
     /// Bluetooth authentication timeout
     AuthenticationTimeout,
+    /// Bluetooth adapter busy
+    Busy,
     /// Bluetooth connection attempt failed
     ConnectionAttemptFailed,
     /// Bluetooth device does not exist
@@ -771,6 +773,7 @@ impl From<Error> for std::io::Error {
             ErrorKind::AuthenticationFailed => E::PermissionDenied,
             ErrorKind::AuthenticationRejected => E::PermissionDenied,
             ErrorKind::AuthenticationTimeout => E::PermissionDenied,
+            ErrorKind::Busy => E::ResourceBusy,
             ErrorKind::ConnectionAttemptFailed => E::ConnectionRefused,
             ErrorKind::DoesNotExist => E::NotFound,
             ErrorKind::Failed => E::Other,
