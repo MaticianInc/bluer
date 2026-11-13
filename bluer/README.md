@@ -89,7 +89,7 @@ To enable all crate features specify the `full` crate feature.
 Requirements
 ------------
 
-The minimum support Rust version (MSRV) is 1.75.
+The minimum support Rust version (MSRV) is 1.83.
 
 This library has been tested with [BlueZ 5.60].
 Older versions might work, but be aware that many bugs related to GATT handling exist.
